@@ -29,8 +29,7 @@ public class TestMrt2 {
 
         // find by name
         driver.findElement(By.name("search_query")).sendKeys("Tan tasci - 5 dakika"+ Keys.ENTER);
-        //driver.findElement(By.id("search")).sendKeys("Tan Tasci Ben Herbahar mutsuzum"+ Keys.ENTER);
-       // driver.findElement(By.className("ytd-searchbox")).sendKeys("Sensiz olmaz"+ Keys.ENTER);
+
 
         driver.findElement(By.partialLinkText("Tan")).click();
 
