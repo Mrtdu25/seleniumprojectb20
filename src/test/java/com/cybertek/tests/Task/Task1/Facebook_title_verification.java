@@ -1,4 +1,4 @@
-package com.cybertek.tests.Task;
+package com.cybertek.tests.Task.Task1;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

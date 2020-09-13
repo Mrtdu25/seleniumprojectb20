@@ -1,4 +1,4 @@
-package com.cybertek.tests.Task;
+package com.cybertek.tests.Task.Task2;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;

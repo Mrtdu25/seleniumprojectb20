@@ -1,4 +1,4 @@
-package com.cybertek.tests.Task;
+package com.cybertek.tests.Task.Task2;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
