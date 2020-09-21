@@ -26,7 +26,7 @@ public class P2_MerriamWebster_Links_Mrt {
 
             System.out.println(textOfEachLink);
 
-            if (textOfEachLink.isEmpty()){
+            if (textOfEachLink.equals("")){
                 linksWithoutText++;
             }else{
                 linksWithText++;

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class P0_FindElements_Practice1_Mrt {
     public static void main(String[] args) throws InterruptedException{
@@ -14,20 +15,29 @@ public class P0_FindElements_Practice1_Mrt {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         //2. Go to http://practice.cybertekschool.com/forgot_password
         driver.get("http://practice.cybertekschool.com/forgot_password");
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
         //3. Print out the texts of all links
-        List<WebElement> listOfLinks= driver.findElements(By.xpath("//body//a"));
+        List<WebElement> linksForgotPasswordPage = driver.findElements(By.xpath("//body//a"));
 
-        for (WebElement eachLink:listOfLinks){
-            System.out.println(eachLink.getText());
+        int linkWithoutText=0;
+        int linkWithText=0;
+        for (WebElement eachLink:linksForgotPasswordPage){
+            String textEachLink= eachLink.getText();
+            System.out.println(textEachLink);
+            if (textEachLink.equals("")){
+                linkWithoutText++;
+            }else {
+                linkWithText++;
+            }
         }
+        System.out.println("Number of link from the forgot password page: "+linksForgotPasswordPage.size());
+        System.out.println("Number of link with text: "+linkWithText);
+        System.out.println("Number of link with text: "+linkWithoutText);
+        System.out.println(driver.getTitle());
 
-        //4. Print out how many total link
-        System.out.println("NumberOfLinks = " + listOfLinks.size());
-
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         driver.close();
-
-
 
     }
 }

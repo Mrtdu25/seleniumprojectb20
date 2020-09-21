@@ -42,7 +42,7 @@ public class P1_CybertekForgotPassword_Gurhan {
         //Option #2: using this syntax --> button[id='form_submit']
         //Option #3: using this syntax --> button[class='radius']
         //Option #4: button.radius
-        WebElement retrivePasswordButton = driver.findElement(By.cssSelector("button.radius"));
+        WebElement retrievePasswordButton = driver.findElement(By.cssSelector("button.radius"));
 
 
         //f. “Powered by Cybertek School” text
@@ -57,7 +57,7 @@ public class P1_CybertekForgotPassword_Gurhan {
         //.isDisplayed --> returns true if given web element is displayed
         //.isDisplayed --> returns flase if given web element is NOT displayed
         if (homeLink.isDisplayed() && emailLabel.isDisplayed() && header.isDisplayed()
-                && emailInput.isDisplayed() && retrivePasswordButton.isDisplayed()
+                && emailInput.isDisplayed() && retrievePasswordButton.isDisplayed()
                 && poweredByDiv.isDisplayed()){
             System.out.println("ALL WEB ELEMENTS ARE DISPLAYED. VERIFICATION PASSED!");
         }else {

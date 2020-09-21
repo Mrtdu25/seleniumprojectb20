@@ -14,64 +14,46 @@ public class P3_Checkbox_Practice_Mrt {
             driver.manage().window().maximize();
 
             //Locating the first checkbox
-            WebElement checkbox1 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[1]"));
+            WebElement checkbox1 = driver.findElement(By.xpath("//form[@id='checkboxes']//input[1]"));
 
             //Locating the second checkbox
-            WebElement checkbox2 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[2]"));
-
+            WebElement checkbox2 = driver.findElement(By.xpath("//form[@id='checkboxes']//input[2]"));
             //2. Confirm checkbox #1 is NOT selected by default
             if (!checkbox1.isSelected()){
-                System.out.println("Checkbox 1 is not selected. Verification PASSED!");
-            }else{
-                System.out.println("Checkbox 1 is selected. Verification FAILED!!!");
+                System.out.println("Checkbox1 is not selected Verification Passed!");
+            }else {
+                System.out.println("Checkbox1 is selected Verification Failed!!!");
             }
 
             //3. Confirm checkbox #2 is SELECTED by default.
             if (checkbox2.isSelected()){
-                System.out.println("Checkbox 2 is selected. Verification PASSED!");
-            }else{
-                System.out.println("Checkbox 2 is not selected. Verification FAILED!!!");
+                System.out.println("Checkbox2 is selected Verification Passed!!!");
+            }else {
+                System.out.println("Checkbox2 is NOT selected Verification Failed!");
             }
 
             //4. Click checkbox #1 to select it.
-            Thread.sleep(1000);
-            checkbox1.click();
-
+             checkbox1.click();
+            Thread.sleep(3000);
             //5. Click checkbox #2 to deselect it.
-            Thread.sleep(1000);
             checkbox2.click();
+            Thread.sleep(3000);
 
             //6. Confirm checkbox #1 is SELECTED.
             if (checkbox1.isSelected()){
-                System.out.println("Checkbox 1 is selected. Verification PASSED!");
-            }else{
-                System.out.println("Checkbox 1 NOT is selected. Verification FAILED!!!");
+                System.out.println("Checkbox1 is  selected Verification Passed!");
+            }else {
+                System.out.println("Checkbox1 is not selected Verification Failed!!!");
             }
 
             //7. Confirm checkbox #2 is NOT selected.
             if (!checkbox2.isSelected()){
-                System.out.println("Checkbox 2 NOT is selected. Verification PASSED!");
-            }else{
-                System.out.println("Checkbox 2 is selected. Verification FAILED!!!");
+                System.out.println("Checkbox2 is not selected Verification Passed!!!");
+            }else {
+                System.out.println("Checkbox2 is selected Verification Failed!");
             }
 
-            WebElement homeLink = driver.findElement(By.xpath("//a[.='Home']"));
 
-            homeLink.click();
-
-            Thread.sleep(1000);
-
-            driver.navigate().back();
-
-            Thread.sleep(1000);
-
-            driver.navigate().refresh();
-
-            checkbox1 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[1]"));
-
-            checkbox1.click();
-
-            System.out.println("            Automation text completed            ");
 
             Thread.sleep(5000);
             driver.close();

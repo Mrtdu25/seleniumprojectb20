@@ -25,7 +25,7 @@ public class P0_FindElements_Practice1_Gurhan {
         //Locating all the links on the page and storing them into a List of WebElements
         List<WebElement> listOfLinks = driver.findElements(By.xpath("//body//a"));
 
-        //Looping through the list of webelements we just created above
+        //Looping through the list of webElements we just created above
         for (WebElement eachLink : listOfLinks) {
             //Getting the text of each element in each iteration, and printing the values
             System.out.println(eachLink.getText());
