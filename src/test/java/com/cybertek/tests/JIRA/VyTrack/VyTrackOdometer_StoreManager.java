@@ -1,4 +1,4 @@
-package com.cybertek.tests.JIRA;
+package com.cybertek.tests.JIRA.VyTrack;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
