@@ -1,4 +1,4 @@
-package com.cybertek.tests.JIRA.VyTrack;
+package com.cybertek.tests.JIRA.VyTrack.Assignment;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -7,15 +7,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class VyTrackOdometer_TruckDriver {
-
+public class VyTrackOdometer_StoreManager {
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver= WebDriverFactory.getDriver("Chrome");
         driver.manage().window().maximize();
         driver.get("https://qa2.vytrack.com/user/login");
         WebElement userName=driver.findElement(By.cssSelector("input[id=\"prependedInput\"]"));
-        userName.sendKeys("user181 ");
+        userName.sendKeys("storemanager231");
         Thread.sleep(3000);
 
         WebElement password=driver.findElement(By.xpath("//input[@name='_password']"));
@@ -26,7 +25,6 @@ public class VyTrackOdometer_TruckDriver {
         actions.moveToElement(fleet).perform();
         driver.findElement(By.partialLinkText("Odometer")).click();
         Thread.sleep(5000);
-
 
     }
 }

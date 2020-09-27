@@ -1,4 +1,4 @@
-package com.cybertek.tests.JIRA.VyTrack;
+package com.cybertek.tests.JIRA.VyTrack.Assignment;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
