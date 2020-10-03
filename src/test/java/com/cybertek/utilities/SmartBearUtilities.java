@@ -48,6 +48,58 @@ public class SmartBearUtilities {
         }
     }
 
+    //4
+    public static void printCitiesZipCodes_States(WebDriver driver){
+        List<WebElement> citiesList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[7]"));
+        List<WebElement> stateList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[8]"));
+        List<WebElement> zipCodesList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[9]"));
+
+        for (int i = 0; i <citiesList.size() ; i++) {
+            System.out.println((i+1)+".City: "+citiesList.get(i).getText()+" Zip Code: "+zipCodesList.get(i).getText()+
+                    " State: " +stateList.get(i).getText());
+        }
+
+    }
+
+    //5
+    public static void verifyZipCode(WebDriver driver,String zipcode){
+        List<WebElement> zipCodesList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[9]"));
+
+        for (WebElement eachZipCode : zipCodesList) {
+            if (eachZipCode.getText().equals(zipcode)){
+                Assert.assertTrue(true);
+                return;
+            }
+        }
+
+        Assert.fail(zipcode+"does not exist in the list Test FAILED!!");
+
+    }
+
+    //6
+    public static void cardNumbers(WebDriver driver){
+        List<WebElement> cardNumbers = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[11]"));
+         int i=1;
+        for (WebElement eachCardNumber : cardNumbers) {
+            System.out.println(i+". CardNumber: "+eachCardNumber);
+            i++;
+        }
+
+    }
+
+    //
+    public static void verifyCreditNumber(WebDriver driver,String cardNumber){
+        List<WebElement> cardNumbers = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[11]"));
+        for (WebElement eachCardNumber : cardNumbers) {
+            if (eachCardNumber.getText().equals(cardNumber)){
+                Assert.assertTrue(true);
+                return;
+            }
+        }
+        Assert.fail(cardNumber+"does not exist in the list Test FAILED!!");
+
+    }
+
 
 
 
@@ -55,5 +107,5 @@ public class SmartBearUtilities {
 
     }
 
-    //3
+
 

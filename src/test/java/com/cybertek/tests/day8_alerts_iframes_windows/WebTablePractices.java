@@ -1,8 +1,10 @@
 package com.cybertek.tests.day8_alerts_iframes_windows;
 
+import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.SmartBearUtilities;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -36,6 +38,32 @@ public class WebTablePractices {
 
         SmartBearUtilities.printNameAndCities(driver);
 
+    }
+
+    @Test
+    public void task6_print_cities_zipcodes_states(){
+        SmartBearUtilities.printCitiesZipCodes_States(driver);
+    }
+
+    @Test
+    public void task7_Verify_Zipcode(){
+        SmartBearUtilities.verifyZipCode(driver,"76743");
+    }
+
+    @Test
+    public void task8_CreditCards(){
+        SmartBearUtilities.cardNumbers(driver);
+    }
+
+    @Test
+    public void task9_Verify_CreditCardNumber() {
+        SmartBearUtilities.verifyCreditNumber(driver,"770077007700");
+
+    }
+    @AfterMethod
+    public void tearDownMethod(){
+        BrowserUtils.wait(2);
+        driver.close();
     }
 
 }
