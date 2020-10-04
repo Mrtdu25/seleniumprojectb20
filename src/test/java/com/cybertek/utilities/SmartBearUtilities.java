@@ -101,6 +101,14 @@ public class SmartBearUtilities {
     }
 
 
+    public static void removeName(WebDriver driver,String name){
+
+        List<WebElement> namesList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[2]"));
+
+           namesList.removeIf(each ->each.equals(name));
+    }
+
+
 
 
 
