@@ -1,4 +1,4 @@
-package com.cybertek.tests.day8_windows_tabs;
+package com.cybertek.tests.day9_windows__tabs;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -59,7 +59,7 @@ public class WindowHandlingPractices {
         Set<String> windowHandles = driver.getWindowHandles();
 
         for (String each : windowHandles) {
-            driver.switchTo().window(each);
+              driver.switchTo().window(each);
             System.out.println("Current page title "+driver.getTitle());
 
             if (driver.getCurrentUrl().contains("etsy")){

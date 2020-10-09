@@ -1,4 +1,4 @@
-package com.cybertek.tests.day8_windows_tabs;
+package com.cybertek.tests.day9_windows__tabs;
 
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.WebDriverFactory;

@@ -39,7 +39,7 @@ public class SmartBearDeleteOrder {
         List<WebElement> tableNames = driver.findElements(By.xpath("//table[@class='SampleTable']//tr//td[2]"));
 
         for (WebElement eachName : tableNames) {
-            Assert.assertFalse(eachName.equals("Mark Smith"));
+            Assert.assertNotEquals(eachName.getText(), "Mark Smith");
         }
     }
 

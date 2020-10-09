@@ -6,6 +6,7 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -34,6 +35,8 @@ public class NextBaseTasks {
 
         WebElement uploadFilesImagesIcon = driver.findElement(By.xpath("" +
                 "//div[@class='feed-add-post-form-wrap']//div//td[@class='diskuf-selector wd-fa-add-file-light-cell wd-fa-add-file-from-main']"));
+        Actions actions =new Actions(driver);
+
         BrowserUtils.wait(2);
         uploadFilesImagesIcon.click();
 
