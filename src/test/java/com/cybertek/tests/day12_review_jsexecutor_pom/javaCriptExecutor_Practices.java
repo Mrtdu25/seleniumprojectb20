@@ -21,7 +21,7 @@ public class javaCriptExecutor_Practices {
 
 
         for (int i = 0; i < 10 ; i++) {
-            BrowserUtils.wait(i);
+            BrowserUtils.wait(1);
             js.executeScript("window.scrollBy(0, 500)");
 
         }
@@ -30,20 +30,22 @@ public class javaCriptExecutor_Practices {
 
     @Test
     public void scroll_using_jsexecutor_2(){
-
+        //get the page to scroll
         Driver.getDriver().get("http://practice.cybertekschool.com/large");
 
-        WebElement link = Driver.getDriver().findElement(By.linkText("Cybertek School"));
-        WebElement homelink = Driver.getDriver().findElement(By.linkText("Home"));
+        //locating cybertek school link
+        WebElement cybertekLink = Driver.getDriver().findElement(By.linkText("Cybertek School"));
+        WebElement homeLink = Driver.getDriver().findElement(By.linkText("Home"));
 
-        JavascriptExecutor js=(JavascriptExecutor) Driver.getDriver();
+        //use js executor to scroll 'Cybertek School' link intoView
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+
+        //use scrollIntoView function from JavaScript to scroll to a specific web element
         BrowserUtils.wait(2);
-        js.executeScript("arguments[0].scrollIntoView(true)",link);
+        js.executeScript("arguments[0].scrollIntoView(true)", cybertekLink);
         BrowserUtils.wait(2);
-        js.executeScript("arguments[0].scrollIntoView(true)",homelink);
+        js.executeScript("arguments[0].scrollIntoView(true)", homeLink);
+
 
     }
-
-
-
 }
