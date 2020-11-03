@@ -42,7 +42,7 @@ public class IframePractice {
 
         //3- Locate as a web element, then switch to it
         WebElement iframe = driver.findElement(By.id("mce_0_ifr"));
-        driver.switchTo().frame(iframe);
+        driver.switchTo().frame("mce_0_ifr");
 
         //Locating paragraph tag as a web element
         WebElement yourContentGoesHereText = driver.findElement(By.xpath("//p"));

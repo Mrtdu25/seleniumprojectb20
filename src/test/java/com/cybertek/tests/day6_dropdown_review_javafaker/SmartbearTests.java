@@ -102,4 +102,6 @@ public class SmartbearTests {
         Thread.sleep(3000);
          driver.close();
     }
+
+
 }
