@@ -1,0 +1,65 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="smokeTestSuite">
+
+    <test name="FacebookTitleVerification">
+        <classes>
+            <class name="com.cybertek.tests.Task.Task1.Facebook_title_verification"> </class>
+        </classes>
+    </test>
+
+    <test name="ZeroBankLinkTextVerification">
+    <classes>
+        <class name="com.cybertek.tests.Task.Task2.ZeroBankLinkTextVerification">
+
+        </class>
+    </classes>
+    </test>
+
+    <test name="SeleniumEasy">
+    <classes>
+        <class name="com.cybertek.tests.Task.Task3.SeleniumEasy">
+        </class>
+    </classes>
+    </test>
+
+    <test name="TC1">
+        <classes>
+            <class name="com.cybertek.tests.Task.Task4.TC1">
+
+            </class>
+        </classes>
+    </test>
+
+    <test name="Task5">
+        <packages>
+            <package name="com.cybertek.tests.Task.Task5">
+
+            </package>
+        </packages>
+    </test>
+
+    <test name="Task6">
+        <packages>
+            <package name="com.cybertek.tests.Task.Task6">
+
+            </package>
+        </packages>
+    </test>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</suite>

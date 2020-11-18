@@ -1,5 +1,6 @@
 package com.cybertek.utilities;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
@@ -39,6 +40,14 @@ public class BrowserUtils {
             e.printStackTrace();
         }
 
+    }
+
+    //Upload file
+
+
+    public void fileUpload(String webelement,String path){
+        WebElement upload=Driver.getDriver().findElement(By.xpath(webelement));
+        upload.sendKeys(path);
     }
 
 

@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="regression">
+
+    <test name="FacebookRegistration">
+        <classes>
+            <class name="com.cybertek.tests.Murat.FacebookRegistration"/>
+        </classes>
+    </test>
+
+
+    <test name="NextBaseTask">
+         <classes>
+            <class name="com.cybertek.tests.JIRA.NextBaseCRM.NextBaseTasks">
+
+            </class>
+         </classes>
+    </test>
+
+    <test name="Vytrack">
+    <packages>
+        <package name="com.cybertek.tests.JIRA.VyTrack">  </package>
+
+    </packages>
+
+    </test>
+
+
+    <test name="getDriverConfigurationPractice">
+      <classes>
+          <class name="com.cybertek.tests.Murat.getDriver_ConfigurationReader_Practice">   </class>
+      </classes>
+
+
+    </test>
+
+
+
+
+</suite>
